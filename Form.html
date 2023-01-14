@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Form</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+
+
+
+<div onmousedown="hideElement()">
+<h2 class="bg-light text-dark text-center w-75 text-center m-auto my-3 py-3 rounded">Add Your Products</h2>
+
+<div class="container mt-3 w-75 p-5 rounded bg-dark text-white">
+    
+    <label>Enter product name : </label>   
+    <input type="text" class="form-control mb-3" id="productName">
+    <label>Enter product price : </label>
+    <input type="number" class="form-control mb-3" id="productPrice">
+    <label>Enter product category : </label>
+    <input type="text" class="form-control mb-3" id="category">
+    <button id="Add" onclick="Add()" class="btn btn-danger">Add</button>
+</div>
+<hr>
+<div class="container mt-3 w-75">
+    <h4 class="bg-light text-dark text-center my-3 py-3 rounded">Your Products</h4>
+</div>
+<div  class="w-50 py-5 m-auto">
+    <!-- this => the input place , .value => refers to to string which is written in the input place -->
+    <input onkeyup="Search(this.value)" class="form-control" placeholder="Search by product name ">
+    <div  id="searchResult" class="w-100 p-3"> </div>
+
+</div>
+<div class="container my-1  w-75">
+    <table class="table text-center table-hover ">
+        <thead class="thead-dark ">
+            <th>  </th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+        </thead>
+        <tbody class="bg-light" id="data">   
+
+        </tbody>
+    </table>
+</div>
+</div>
+<script src="Form.js"></script>
+</body>
+
+
+</html>
